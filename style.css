@@ -1,0 +1,213 @@
+body {
+  padding: 100px 0; }
+  body .drone-wrapper {
+    margin: auto;
+    width: 960px;
+    height: 703px;
+    position: relative; }
+    body .drone-wrapper .image-wrap {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
+      body .drone-wrapper .image-wrap.front::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url("img/drone_1.png");
+        background-size: cover;
+        width: 100%;
+        animation-name: clip-shrink;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s; }
+      body .drone-wrapper .image-wrap.front::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0;
+        background: -moz-linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+        opacity: 0.8;
+        animation-name: width-grow;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s; }
+      body .drone-wrapper .image-wrap.middle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url("img/drone_2.png");
+        background-size: cover;
+        width: 100%;
+        animation-name: fade-out;
+        animation-duration: 2.3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.2s; }
+  body .drone-wrapper-2 {
+    margin: auto;
+    width: 960px;
+    height: 703px;
+    position: relative; }
+    body .drone-wrapper-2 .image-wrap {
+      position: absolute;
+      height: 100%;
+      width: 100%; }
+      body .drone-wrapper-2 .image-wrap.front::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url("img/drone_1.png");
+        background-size: cover;
+        width: 100%;
+        animation-name: fade-out;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s; }
+      body .drone-wrapper-2 .image-wrap.middle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url("img/drone_2.png");
+        background-size: cover;
+        width: 100%;
+        animation-name: fade-out;
+        animation-duration: 2.8s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.2s; }
+  body img {
+    width: 100%; }
+  body .sprinkles {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    body .sprinkles .sprinkle {
+      padding: 4px;
+      border: 1px solid #dd7832;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      animation: sprinkle 1s ease-out;
+      animation-fill-mode: forwards; }
+      body .sprinkles .sprinkle .pulse-ring {
+        border: 3px solid #dd7832;
+        border-radius: 50%;
+        height: 22px;
+        width: 22px;
+        animation: pulsate 1s ease-out;
+        opacity: 0.0;
+        top: -4px;
+        left: -4px;
+        position: absolute; }
+      body .sprinkles .sprinkle .inner {
+        background: #dd7832;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%; }
+    body .sprinkles .sprinkle-1 {
+      left: 258px;
+      top: 317px;
+      animation-delay: 3.0s; }
+      body .sprinkles .sprinkle-1 .pulse-ring {
+        animation-delay: 3.0s; }
+    body .sprinkles .sprinkle-2 {
+      left: 375px;
+      top: 317px;
+      animation-delay: 3.2s; }
+      body .sprinkles .sprinkle-2 .pulse-ring {
+        animation-delay: 3.2s; }
+    body .sprinkles .sprinkle-3 {
+      left: 449px;
+      top: 332px;
+      animation-delay: 3.4s; }
+      body .sprinkles .sprinkle-3 .pulse-ring {
+        animation-delay: 3.4s; }
+    body .sprinkles .sprinkle-4 {
+      left: 478px;
+      top: 312px;
+      animation-delay: 3.6s; }
+      body .sprinkles .sprinkle-4 .pulse-ring {
+        animation-delay: 3.6s; }
+    body .sprinkles .sprinkle-5 {
+      left: 550px;
+      top: 265px;
+      animation-delay: 3.8s; }
+      body .sprinkles .sprinkle-5 .pulse-ring {
+        animation-delay: 3.8s; }
+    body .sprinkles .sprinkle-6 {
+      left: 247px;
+      top: 441px;
+      animation-delay: 4.0s; }
+      body .sprinkles .sprinkle-6 .pulse-ring {
+        animation-delay: 4.0s; }
+    body .sprinkles .sprinkle-7 {
+      left: 398px;
+      top: 432px;
+      animation-delay: 4.2s; }
+      body .sprinkles .sprinkle-7 .pulse-ring {
+        animation-delay: 4.2s; }
+    body .sprinkles .sprinkle-8 {
+      left: 458px;
+      top: 498px;
+      animation-delay: 4.4s; }
+      body .sprinkles .sprinkle-8 .pulse-ring {
+        animation-delay: 4.4s; }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes width-grow {
+  0% {
+    width: 0%;
+    opacity: 1; }
+  50% {
+    width: 100%;
+    opacity: 0; }
+  100% {
+    width: 0%;
+    opacity: 1; } }
+@keyframes clip-shrink {
+  0% {
+    clip-path: inset(0 0 0 0); }
+  50% {
+    clip-path: inset(0 100% 0 0); }
+  100% {
+    clip-path: inset(0 0 0 0); } }
+@keyframes sprinkle {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1.0; }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0.0; } }
+
+/*# sourceMappingURL=style.css.map */
