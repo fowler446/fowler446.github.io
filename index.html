@@ -1,57 +1,165 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" async="" src="https://acdn.adnxs.com/video/outstream/ANOutstreamVideo.js"></script>
-    <script async="" src="https://cdn.jsdelivr.net/npm/prebid.js@latest/dist/not-for-prod/prebid.js"></script>
-  <script>
-	    var pbjs = pbjs || {};
-	    pbjs.que = pbjs.que || [];
+    <meta charset="utf-8" />
+    <title>Example</title>
+    <style>
+      .wrapper {
+        display: flex;
+      }
 
-	    var adUnits = [{
-	        code: 'video1',
-	        mediaTypes: {
-	            video: {
-	                context: 'outstream',
-			playerSize: [640, 480],
-			mimes: ['video/mp4'],
-			protocols: [1, 2, 3, 4, 5, 6, 7, 8],
-			playbackmethod: [2],
-			skip: 1
-	            }
-	        },
-	        bids: [
-            {
-	            bidder: 'appnexus',
-	            params: {
-	                placementId: 13232385
-	            },
-            },
-            {  
-              bidder: 'pubmatic',
-              params: {
-                  publisherId: '32572',
-              },
-            },
-         ]
-        }];
+      .right-column {
+        position: relative;
+        flex: 1 0 25%;
+      }
 
-        pbjs.que.push(function() {
-            pbjs.addAdUnits(adUnits);
-            pbjs.requestBids({
-                timeout: 1000,
-                bidsBackHandler: function(bids) {
-                    var highestCpmBids = pbjs.getHighestCpmBids('video1');
-                    pbjs.renderAd(document, highestCpmBids[0].adId);
-                }
-            });
-        });
+      #vvv-video-ad {
+        max-width: 500px;
+        margin: auto;
+      }
 
-    
-  </script>
+      @media screen and (max-width: 1024px) {
+        #vvv-video-ad {
+          max-width: 100%
+        }
+        .right-column {
+          display: none;
+        }
+      }
 
+      .example-box {
+        top: 20px;
+        position: sticky;
+        width: 200px;
+        height: 180px;
+        border: 1px solid black;
+        background: lightgrey;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div id='video1'>
-      <p>Prebid Outstream Video Ad</p>
-    </div> 
+    <div class='wrapper'>
+      <div class='left-column'> 
+        <p>
+          In et officia williamsburg. Skateboard ipsum wayfarers palo santo, laboris 3 wolf moon flannel proident yuccie kombucha sunt readymade cray. Unicorn taxidermy neutra scenester tacos art party cronut drinking vinegar chambray sartorial. Kale chips migas portland, cray celiac yes plz tacos literally lomo street art officia meh ethical la croix chillwave.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <div id='vvv-video-ad'></div>
+        <p>
+          In et officia williamsburg. Skateboard ipsum wayfarers palo santo, laboris 3 wolf moon flannel proident yuccie kombucha sunt readymade cray. Unicorn taxidermy neutra scenester tacos art party cronut drinking vinegar chambray sartorial. Kale chips migas portland, cray celiac yes plz tacos literally lomo street art officia meh ethical la croix chillwave.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          In et officia williamsburg. Skateboard ipsum wayfarers palo santo, laboris 3 wolf moon flannel proident yuccie kombucha sunt readymade cray. Unicorn taxidermy neutra scenester tacos art party cronut drinking vinegar chambray sartorial. Kale chips migas portland, cray celiac yes plz tacos literally lomo street art officia meh ethical la croix chillwave.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          In et officia williamsburg. Skateboard ipsum wayfarers palo santo, laboris 3 wolf moon flannel proident yuccie kombucha sunt readymade cray. Unicorn taxidermy neutra scenester tacos art party cronut drinking vinegar chambray sartorial. Kale chips migas portland, cray celiac yes plz tacos literally lomo street art officia meh ethical la croix chillwave.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          In et officia williamsburg. Skateboard ipsum wayfarers palo santo, laboris 3 wolf moon flannel proident yuccie kombucha sunt readymade cray. Unicorn taxidermy neutra scenester tacos art party cronut drinking vinegar chambray sartorial. Kale chips migas portland, cray celiac yes plz tacos literally lomo street art officia meh ethical la croix chillwave.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+        <p>
+          Biodiesel culpa squid YOLO banh mi. Mollit laboris sed af vice, DSA lyft humblebrag hashtag gatekeep coloring book. Live-edge art party ut glossier. Chartreuse asymmetrical viral polaroid. Gatekeep bushwick trust fund hella.
+        </p>
+        <p>
+          Mixtape hella meditation, prism tacos yuccie hot chicken chia typewriter wolf. Aute polaroid migas, cupidatat hoodie mustache activated charcoal irony twee excepteur irure. Viral occupy magna brunch, artisan readymade photo booth pinterest. Pop-up man braid voluptate, vibecession gochujang forage hashtag commodo bespoke sunt craft beer copper mug hoodie ea.
+        </p>
+        <p>
+          VHS elit gatekeep raclette artisan, poke 3 wolf moon. Tilde magna you probably haven't heard of them, veniam laboris small batch retro aliquip wayfarers. Tonx sed tacos celiac schlitz four dollar toast. Cornhole air plant prism scenester consequat ramps venmo coloring book salvia vibecession elit. Godard offal plaid subway tile selfies, shoreditch officia DSA gatekeep. Retro tote bag everyday carry, fanny pack mumblecore vaporware disrupt pitchfork.
+        </p>
+      </div>
+      <div class='right-column'>
+        <div class='example-box'>
+          <p>Cool trending stuff</p>
+        </div>
+      </div>
+    </div>
+    <script defer src="./dist/vvv-example.com.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        $vvvInit('vvv-video-ad')
+      })
+    </script>
   </body>
 </html>
